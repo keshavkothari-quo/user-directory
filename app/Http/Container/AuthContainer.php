@@ -102,7 +102,7 @@ class AuthContainer implements AuthContract{
         }
         if(!empty($data['mobile'])){
             $validateArray = [
-                'mobile' => 'required|numeric|min:10|unique:users',
+                'mobile' => 'required|numeric|min:1000000000|max:100000000000000|unique:users',
             ];
         }
         $validateArray['password'] = ['required','min:6','regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).+$/'];
@@ -117,7 +117,7 @@ class AuthContainer implements AuthContract{
         }
         if(!empty($data['mobile'])){
             $validateArray = [
-                'mobile' => 'required|numeric|min:10',
+                'mobile' => 'required|numeric|min:1000000000|max:100000000000000',
             ];
         }
         $validateArray['password'] = ['required','min:6','regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).+$/'];

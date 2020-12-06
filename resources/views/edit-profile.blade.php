@@ -81,20 +81,23 @@
          @endif
          <div class="form-group">
              <label for="state">State</label>
-             <select class="form-control" id="state-dropdown" name="state">
+             <select class="form-control col-3" id="state-dropdown" name="state">
                  <option value="">Select State</option>
              </select>
          </div>
          <div class="form-group">
              <label for="city">City</label>
-             <select class="form-control" id="city-dropdown" name="city">
+             <select class="form-control col-3" id="city-dropdown" name="city">
                  <option value="">Select City</option>
-
              </select>
          </div>
          <div class="form-group">
              <button class="btn btn-primary" type="submit">Save</button>
+             <a href="{{url('/dashboard')}}">
+             <button class="btn btn-danger" type="button"> Cancel </button>
+             </a>
          </div>
+
      </form>
  </div>
 @include('footer');
@@ -148,7 +151,7 @@
                     });
                     $('#state-dropdown option[value=userState]').attr("selected",true);
                     $('#state-dropdown').val(userState['id']);
-                    $('#city-dropdown').html('<option value="'+cityId+'">'+ userState['name'] +'</option>');
+                    $('#city-dropdown').html('<option value="'+userCity+'">'+ userState['name'] +'</option>');
                 }
             });
         }

@@ -35,8 +35,6 @@
 <div>
     <h3> User Dashboard </h3>
     <span>Your profile detaits, to Edit  <a href="{{url('edit-profile')}}/{{Auth::user()->id }}">Click here</a> </span>
-{{--    <form action="{{url('save-profile')}}" method="POST" id="logForm">--}}
-        {{ csrf_field() }}
         <input hidden name="userId" value="{{$userId->id}}">
         <div class="form-group">
         @if($userId->name)
@@ -58,7 +56,7 @@
             @endif
         </div>
         <div class="form-group md-form md-outline input-with-post-icon datepicker">
-            @if(!$userId->dob)
+            @if($userId->dob)
                 <label  for="inputname">DOB</label>
                 <span> {{$userId->dob}}</span>
             @endif
@@ -70,13 +68,7 @@
             </div>
             <input id="userCityId" hidden value="{{$userId->userCity->city_id}}">
         @endif
-        @if(!$userId->userCity)
-        <div class="form-group">
-            <button class="btn btn-primary" type="submit">Save</button>
-        </div>
-        @endif
-{{--    </form>--}}
-</div>
+    </div>
 </body>
 @include('footer');
 </body>

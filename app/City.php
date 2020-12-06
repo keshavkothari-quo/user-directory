@@ -12,4 +12,8 @@ class City extends Model
     public function userCity(){
         return $this->hasMany('App\UserCity');
     }
+
+    public function getCityFromStateId($stateId){
+        return City::where("state_id",$stateId)->get(["name","id"]);
+    }
 }

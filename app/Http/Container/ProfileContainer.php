@@ -56,7 +56,7 @@ class ProfileContainer implements ProfileContract
 
     public function validateArray($data){
 
-        $validateArray = ['name' => 'required','email' => 'required|email','mobile' => 'required|numeric|min:10','dob'=>'required','city'=>'required'];
+        $validateArray = ['name' => 'required','email' => 'required|email','mobile' => 'required|numeric|min:1000000000|max:100000000000000|unique:users','dob'=>'required','city'=>'required'];
         return $validateArray;
     }
 

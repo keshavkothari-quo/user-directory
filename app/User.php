@@ -89,4 +89,9 @@ class User extends Authenticatable implements CommonRepo
         return User::where('email','=',$email)->first();
 
     }
+
+    public function getAllData()
+    {
+        return User::all();
+    }
 }
