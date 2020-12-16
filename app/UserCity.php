@@ -29,5 +29,10 @@ class UserCity extends Model
        return DB::update($query);
     }
 
+    public static function deleteUserCity($userId)
+    {
+        DB::table('users_city')->where('user_id',$userId)->delete();
+    }
+
 
 }

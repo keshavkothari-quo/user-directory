@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Validator;
 
 class ProfileContainer implements ProfileContract
 {
@@ -27,8 +28,14 @@ class ProfileContainer implements ProfileContract
     }
 
     public function saveProfileData($data){
+
         $validationArray = $this->validateArray($data);
-        request()->validate($validationArray);
+//        request()->validate($validationArray);
+//        dd($data);
+        $validate = Validator::make($data,$validationArray);
+        if($validate->fails()){
+            return null;
+        }
         $userObj = new User();
         $user = $userObj->findById($data['userId']);
         $user->name = $data['name'];
@@ -56,7 +63,7 @@ class ProfileContainer implements ProfileContract
 
     public function validateArray($data){
 
-        $validateArray = ['name' => 'required','email' => 'required|email','mobile' => 'required|numeric|min:1000000000|max:100000000000000|unique:users','dob'=>'required','city'=>'required'];
+        $validateArray = ['name' => 'required','email' => 'required|email','mobile' => 'required|numeric|min:1000000000|max:100000000000000','dob'=>'required','city'=>'required'];
         return $validateArray;
     }
 
