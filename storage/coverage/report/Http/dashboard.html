@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /home/keshav/projects/user-directory/app/Http</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../_css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="../_css/nv.d3.min.css" rel="stylesheet" type="text/css">
+  <link href="../_css/style.css" rel="stylesheet" type="text/css">
+  <link href="../_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="../index.html">/home/keshav/projects/user-directory/app</a></li>
+         <li class="breadcrumb-item"><a href="index.html">Http</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Container/ContactsContainer.php.html#13">App\Http\Container\ContactsContainer</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Container/LocationContainer.php.html#12">App\Http\Container\LocationContainer</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Container/ProfileContainer.php.html#16">App\Http\Container\ProfileContainer</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Auth/ForgotPasswordController.php.html#8">App\Http\Controllers\Auth\ForgotPasswordController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Auth/LoginController.php.html#8">App\Http\Controllers\Auth\LoginController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Auth/RegisterController.php.html#11">App\Http\Controllers\Auth\RegisterController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Auth/ResetPasswordController.php.html#8">App\Http\Controllers\Auth\ResetPasswordController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Auth/VerificationController.php.html#8">App\Http\Controllers\Auth\VerificationController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/ContactsController.php.html#11">App\Http\Controllers\ContactsController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/LocationController.php.html#8">App\Http\Controllers\LocationController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/ProfileDetailController.php.html#11">App\Http\Controllers\ProfileDetailController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Middleware/AuthLoginMiddleware.php.html#8">App\Http\Middleware\AuthLoginMiddleware</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Middleware/Authenticate.php.html#7">App\Http\Middleware\Authenticate</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Middleware/RedirectIfAuthenticated.php.html#8">App\Http\Middleware\RedirectIfAuthenticated</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/AuthController.php.html#18">App\Http\Controllers\AuthController</a></td><td class="text-right">17%</td></tr>
+       <tr><td><a href="Container/AuthContainer.php.html#18">App\Http\Container\AuthContainer</a></td><td class="text-right">20%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Container/AuthContainer.php.html#18">App\Http\Container\AuthContainer</a></td><td class="text-right">476</td></tr>
+       <tr><td><a href="Controllers/AuthController.php.html#18">App\Http\Controllers\AuthController</a></td><td class="text-right">178</td></tr>
+       <tr><td><a href="Container/ProfileContainer.php.html#16">App\Http\Container\ProfileContainer</a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="Controllers/ProfileDetailController.php.html#11">App\Http\Controllers\ProfileDetailController</a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="Container/ContactsContainer.php.html#13">App\Http\Container\ContactsContainer</a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="Container/LocationContainer.php.html#12">App\Http\Container\LocationContainer</a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Controllers/ContactsController.php.html#11">App\Http\Controllers\ContactsController</a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Middleware/AuthLoginMiddleware.php.html#8">App\Http\Middleware\AuthLoginMiddleware</a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Middleware/Authenticate.php.html#7">App\Http\Middleware\Authenticate</a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Middleware/RedirectIfAuthenticated.php.html#8">App\Http\Middleware\RedirectIfAuthenticated</a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Middleware/RedirectIfAuthenticated.php.html#18"><abbr title="App\Http\Middleware\RedirectIfAuthenticated::handle">handle</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/ContactsController.php.html#29"><abbr title="App\Http\Controllers\ContactsController::addUserFriend">addUserFriend</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Auth/VerificationController.php.html#35"><abbr title="App\Http\Controllers\Auth\VerificationController::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/AuthController.php.html#31"><abbr title="App\Http\Controllers\AuthController::register">register</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/AuthController.php.html#50"><abbr title="App\Http\Controllers\AuthController::postRegister">postRegister</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/AuthController.php.html#66"><abbr title="App\Http\Controllers\AuthController::logout">logout</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/AuthController.php.html#72"><abbr title="App\Http\Controllers\AuthController::forgetPassword">forgetPassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/AuthController.php.html#76"><abbr title="App\Http\Controllers\AuthController::sendForgetPassword">sendForgetPassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/AuthController.php.html#89"><abbr title="App\Http\Controllers\AuthController::resetPassword">resetPassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/AuthController.php.html#97"><abbr title="App\Http\Controllers\AuthController::updatePassword">updatePassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/ContactsController.php.html#14"><abbr title="App\Http\Controllers\ContactsController::getContactList">getContactList</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/ContactsController.php.html#22"><abbr title="App\Http\Controllers\ContactsController::seachContactList">seachContactList</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/LocationController.php.html#11"><abbr title="App\Http\Controllers\LocationController::getState">getState</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Container/AuthContainer.php.html#45"><abbr title="App\Http\Container\AuthContainer::postRegister">postRegister</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/LocationController.php.html#16"><abbr title="App\Http\Controllers\LocationController::getCity">getCity</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/LocationController.php.html#21"><abbr title="App\Http\Controllers\LocationController::getUserState">getUserState</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/ProfileDetailController.php.html#16"><abbr title="App\Http\Controllers\ProfileDetailController::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/ProfileDetailController.php.html#20"><abbr title="App\Http\Controllers\ProfileDetailController::dashboard">dashboard</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/ProfileDetailController.php.html#29"><abbr title="App\Http\Controllers\ProfileDetailController::saveProfileDetail">saveProfileDetail</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/ProfileDetailController.php.html#35"><abbr title="App\Http\Controllers\ProfileDetailController::getProfileDetail">getProfileDetail</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/ProfileDetailController.php.html#45"><abbr title="App\Http\Controllers\ProfileDetailController::editProfileDetail">editProfileDetail</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/ProfileDetailController.php.html#51"><abbr title="App\Http\Controllers\ProfileDetailController::resetPassword">resetPassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/ProfileDetailController.php.html#55"><abbr title="App\Http\Controllers\ProfileDetailController::updatePassword">updatePassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Middleware/AuthLoginMiddleware.php.html#17"><abbr title="App\Http\Middleware\AuthLoginMiddleware::handle">handle</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Middleware/Authenticate.php.html#16"><abbr title="App\Http\Middleware\Authenticate::redirectTo">redirectTo</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Auth/ResetPasswordController.php.html#35"><abbr title="App\Http\Controllers\Auth\ResetPasswordController::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Auth/RegisterController.php.html#64"><abbr title="App\Http\Controllers\Auth\RegisterController::create">create</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Auth/RegisterController.php.html#49"><abbr title="App\Http\Controllers\Auth\RegisterController::validator">validator</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Container/ContactsContainer.php.html#43"><abbr title="App\Http\Container\ContactsContainer::addUserFriend">addUserFriend</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Container/AuthContainer.php.html#67"><abbr title="App\Http\Container\AuthContainer::dashboard">dashboard</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Container/AuthContainer.php.html#72"><abbr title="App\Http\Container\AuthContainer::create">create</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Container/AuthContainer.php.html#97"><abbr title="App\Http\Container\AuthContainer::validateArray">validateArray</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Container/AuthContainer.php.html#127"><abbr title="App\Http\Container\AuthContainer::logout">logout</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Container/AuthContainer.php.html#132"><abbr title="App\Http\Container\AuthContainer::forgetPassword">forgetPassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Container/AuthContainer.php.html#155"><abbr title="App\Http\Container\AuthContainer::sendEmail">sendEmail</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Container/AuthContainer.php.html#165"><abbr title="App\Http\Container\AuthContainer::checkToken">checkToken</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Container/AuthContainer.php.html#174"><abbr title="App\Http\Container\AuthContainer::updatePassword">updatePassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Container/AuthContainer.php.html#189"><abbr title="App\Http\Container\AuthContainer::validatePassword">validatePassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Container/ContactsContainer.php.html#16"><abbr title="App\Http\Container\ContactsContainer::getContactList">getContactList</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Container/ContactsContainer.php.html#29"><abbr title="App\Http\Container\ContactsContainer::searchContactList">searchContactList</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Container/ContactsContainer.php.html#52"><abbr title="App\Http\Container\ContactsContainer::getFriendList">getFriendList</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Auth/RegisterController.php.html#38"><abbr title="App\Http\Controllers\Auth\RegisterController::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Container/LocationContainer.php.html#16"><abbr title="App\Http\Container\LocationContainer::getStates">getStates</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Container/LocationContainer.php.html#29"><abbr title="App\Http\Container\LocationContainer::getCities">getCities</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Container/LocationContainer.php.html#35"><abbr title="App\Http\Container\LocationContainer::userState">userState</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Container/ProfileContainer.php.html#19"><abbr title="App\Http\Container\ProfileContainer::getProfileDetail">getProfileDetail</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Container/ProfileContainer.php.html#25"><abbr title="App\Http\Container\ProfileContainer::saveProfileData">saveProfileData</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Container/ProfileContainer.php.html#55"><abbr title="App\Http\Container\ProfileContainer::validateArray">validateArray</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Container/ProfileContainer.php.html#61"><abbr title="App\Http\Container\ProfileContainer::updatePassword">updatePassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Container/ProfileContainer.php.html#75"><abbr title="App\Http\Container\ProfileContainer::validatePasswordFieldArray">validatePasswordFieldArray</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Auth/ForgotPasswordController.php.html#28"><abbr title="App\Http\Controllers\Auth\ForgotPasswordController::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/Auth/LoginController.php.html#35"><abbr title="App\Http\Controllers\Auth\LoginController::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controllers/AuthController.php.html#36"><abbr title="App\Http\Controllers\AuthController::postLogin">postLogin</abbr></a></td><td class="text-right">42%</td></tr>
+       <tr><td><a href="Container/AuthContainer.php.html#19"><abbr title="App\Http\Container\AuthContainer::postLogin">postLogin</abbr></a></td><td class="text-right">66%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Container/ProfileContainer.php.html#25"><abbr title="App\Http\Container\ProfileContainer::saveProfileData">saveProfileData</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Controllers/AuthController.php.html#76"><abbr title="App\Http\Controllers\AuthController::sendForgetPassword">sendForgetPassword</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Container/AuthContainer.php.html#72"><abbr title="App\Http\Container\AuthContainer::create">create</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Container/AuthContainer.php.html#97"><abbr title="App\Http\Container\AuthContainer::validateArray">validateArray</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Container/ContactsContainer.php.html#16"><abbr title="App\Http\Container\ContactsContainer::getContactList">getContactList</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Container/ContactsContainer.php.html#29"><abbr title="App\Http\Container\ContactsContainer::searchContactList">searchContactList</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Container/AuthContainer.php.html#45"><abbr title="App\Http\Container\AuthContainer::postRegister">postRegister</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controllers/AuthController.php.html#50"><abbr title="App\Http\Controllers\AuthController::postRegister">postRegister</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Middleware/RedirectIfAuthenticated.php.html#18"><abbr title="App\Http\Middleware\RedirectIfAuthenticated::handle">handle</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Middleware/Authenticate.php.html#16"><abbr title="App\Http\Middleware\Authenticate::redirectTo">redirectTo</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Middleware/AuthLoginMiddleware.php.html#17"><abbr title="App\Http\Middleware\AuthLoginMiddleware::handle">handle</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controllers/ProfileDetailController.php.html#55"><abbr title="App\Http\Controllers\ProfileDetailController::updatePassword">updatePassword</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controllers/ProfileDetailController.php.html#35"><abbr title="App\Http\Controllers\ProfileDetailController::getProfileDetail">getProfileDetail</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controllers/ProfileDetailController.php.html#20"><abbr title="App\Http\Controllers\ProfileDetailController::dashboard">dashboard</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controllers/ContactsController.php.html#14"><abbr title="App\Http\Controllers\ContactsController::getContactList">getContactList</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Container/ProfileContainer.php.html#61"><abbr title="App\Http\Container\ProfileContainer::updatePassword">updatePassword</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controllers/AuthController.php.html#89"><abbr title="App\Http\Controllers\AuthController::resetPassword">resetPassword</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Container/LocationContainer.php.html#16"><abbr title="App\Http\Container\LocationContainer::getStates">getStates</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Container/ContactsContainer.php.html#52"><abbr title="App\Http\Container\ContactsContainer::getFriendList">getFriendList</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Container/AuthContainer.php.html#174"><abbr title="App\Http\Container\AuthContainer::updatePassword">updatePassword</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Container/AuthContainer.php.html#165"><abbr title="App\Http\Container\AuthContainer::checkToken">checkToken</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Container/AuthContainer.php.html#132"><abbr title="App\Http\Container\AuthContainer::forgetPassword">forgetPassword</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Container/AuthContainer.php.html#19"><abbr title="App\Http\Container\AuthContainer::postLogin">postLogin</abbr></a></td><td class="text-right">5</td></tr>
+       <tr><td><a href="Controllers/AuthController.php.html#36"><abbr title="App\Http\Controllers\AuthController::postLogin">postLogin</abbr></a></td><td class="text-right">4</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 7.0.10</a> using <a href="https://secure.php.net/" target="_top">PHP 7.4.3</a> with <a href="https://xdebug.org/">Xdebug 2.9.2</a> and <a href="https://phpunit.de/">PHPUnit 8.5.9</a> at Wed Dec 23 5:38:24 UTC 2020.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="../_js/jquery.min.js" type="text/javascript"></script>
+  <script src="../_js/d3.min.js" type="text/javascript"></script>
+  <script src="../_js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([14,0,1,1,0,0,0,0,0,0,0,7], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([52,0,0,0,0,1,0,1,0,2,0,2], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[20.833333333333336,30,"<a href=\"Container\/AuthContainer.php.html#18\">App\\Http\\Container\\AuthContainer<\/a>"],[0,9,"<a href=\"Container\/ContactsContainer.php.html#13\">App\\Http\\Container\\ContactsContainer<\/a>"],[0,4,"<a href=\"Container\/LocationContainer.php.html#12\">App\\Http\\Container\\LocationContainer<\/a>"],[0,10,"<a href=\"Container\/ProfileContainer.php.html#16\">App\\Http\\Container\\ProfileContainer<\/a>"],[0,1,"<a href=\"Controllers\/Auth\/ForgotPasswordController.php.html#8\">App\\Http\\Controllers\\Auth\\ForgotPasswordController<\/a>"],[0,1,"<a href=\"Controllers\/Auth\/LoginController.php.html#8\">App\\Http\\Controllers\\Auth\\LoginController<\/a>"],[0,3,"<a href=\"Controllers\/Auth\/RegisterController.php.html#11\">App\\Http\\Controllers\\Auth\\RegisterController<\/a>"],[0,1,"<a href=\"Controllers\/Auth\/ResetPasswordController.php.html#8\">App\\Http\\Controllers\\Auth\\ResetPasswordController<\/a>"],[0,1,"<a href=\"Controllers\/Auth\/VerificationController.php.html#8\">App\\Http\\Controllers\\Auth\\VerificationController<\/a>"],[17.647058823529413,17,"<a href=\"Controllers\/AuthController.php.html#18\">App\\Http\\Controllers\\AuthController<\/a>"],[0,4,"<a href=\"Controllers\/ContactsController.php.html#11\">App\\Http\\Controllers\\ContactsController<\/a>"],[100,0,"<a href=\"Controllers\/Controller.php.html#10\">App\\Http\\Controllers\\Controller<\/a>"],[0,3,"<a href=\"Controllers\/LocationController.php.html#8\">App\\Http\\Controllers\\LocationController<\/a>"],[0,10,"<a href=\"Controllers\/ProfileDetailController.php.html#11\">App\\Http\\Controllers\\ProfileDetailController<\/a>"],[100,0,"<a href=\"Kernel.php.html#8\">App\\Http\\Kernel<\/a>"],[0,2,"<a href=\"Middleware\/AuthLoginMiddleware.php.html#8\">App\\Http\\Middleware\\AuthLoginMiddleware<\/a>"],[0,2,"<a href=\"Middleware\/Authenticate.php.html#7\">App\\Http\\Middleware\\Authenticate<\/a>"],[100,0,"<a href=\"Middleware\/CheckForMaintenanceMode.php.html#7\">App\\Http\\Middleware\\CheckForMaintenanceMode<\/a>"],[100,0,"<a href=\"Middleware\/EncryptCookies.php.html#7\">App\\Http\\Middleware\\EncryptCookies<\/a>"],[0,2,"<a href=\"Middleware\/RedirectIfAuthenticated.php.html#8\">App\\Http\\Middleware\\RedirectIfAuthenticated<\/a>"],[100,0,"<a href=\"Middleware\/TrimStrings.php.html#7\">App\\Http\\Middleware\\TrimStrings<\/a>"],[100,0,"<a href=\"Middleware\/TrustProxies.php.html#8\">App\\Http\\Middleware\\TrustProxies<\/a>"],[100,0,"<a href=\"Middleware\/VerifyCsrfToken.php.html#7\">App\\Http\\Middleware\\VerifyCsrfToken<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[66.66666666666666,5,"<a href=\"Container\/AuthContainer.php.html#19\">App\\Http\\Container\\AuthContainer::postLogin<\/a>"],[0,3,"<a href=\"Container\/AuthContainer.php.html#45\">App\\Http\\Container\\AuthContainer::postRegister<\/a>"],[0,1,"<a href=\"Container\/AuthContainer.php.html#67\">App\\Http\\Container\\AuthContainer::dashboard<\/a>"],[0,3,"<a href=\"Container\/AuthContainer.php.html#72\">App\\Http\\Container\\AuthContainer::create<\/a>"],[83.33333333333334,3,"<a href=\"Container\/AuthContainer.php.html#86\">App\\Http\\Container\\AuthContainer::createCredentialForLogin<\/a>"],[0,3,"<a href=\"Container\/AuthContainer.php.html#97\">App\\Http\\Container\\AuthContainer::validateArray<\/a>"],[83.33333333333334,3,"<a href=\"Container\/AuthContainer.php.html#112\">App\\Http\\Container\\AuthContainer::validateArrayLogin<\/a>"],[0,1,"<a href=\"Container\/AuthContainer.php.html#127\">App\\Http\\Container\\AuthContainer::logout<\/a>"],[0,2,"<a href=\"Container\/AuthContainer.php.html#132\">App\\Http\\Container\\AuthContainer::forgetPassword<\/a>"],[0,1,"<a href=\"Container\/AuthContainer.php.html#155\">App\\Http\\Container\\AuthContainer::sendEmail<\/a>"],[0,2,"<a href=\"Container\/AuthContainer.php.html#165\">App\\Http\\Container\\AuthContainer::checkToken<\/a>"],[0,2,"<a href=\"Container\/AuthContainer.php.html#174\">App\\Http\\Container\\AuthContainer::updatePassword<\/a>"],[0,1,"<a href=\"Container\/AuthContainer.php.html#189\">App\\Http\\Container\\AuthContainer::validatePassword<\/a>"],[0,3,"<a href=\"Container\/ContactsContainer.php.html#16\">App\\Http\\Container\\ContactsContainer::getContactList<\/a>"],[0,3,"<a href=\"Container\/ContactsContainer.php.html#29\">App\\Http\\Container\\ContactsContainer::searchContactList<\/a>"],[0,1,"<a href=\"Container\/ContactsContainer.php.html#43\">App\\Http\\Container\\ContactsContainer::addUserFriend<\/a>"],[0,2,"<a href=\"Container\/ContactsContainer.php.html#52\">App\\Http\\Container\\ContactsContainer::getFriendList<\/a>"],[0,2,"<a href=\"Container\/LocationContainer.php.html#16\">App\\Http\\Container\\LocationContainer::getStates<\/a>"],[0,1,"<a href=\"Container\/LocationContainer.php.html#29\">App\\Http\\Container\\LocationContainer::getCities<\/a>"],[0,1,"<a href=\"Container\/LocationContainer.php.html#35\">App\\Http\\Container\\LocationContainer::userState<\/a>"],[0,1,"<a href=\"Container\/ProfileContainer.php.html#19\">App\\Http\\Container\\ProfileContainer::getProfileDetail<\/a>"],[0,5,"<a href=\"Container\/ProfileContainer.php.html#25\">App\\Http\\Container\\ProfileContainer::saveProfileData<\/a>"],[0,1,"<a href=\"Container\/ProfileContainer.php.html#55\">App\\Http\\Container\\ProfileContainer::validateArray<\/a>"],[0,2,"<a href=\"Container\/ProfileContainer.php.html#61\">App\\Http\\Container\\ProfileContainer::updatePassword<\/a>"],[0,1,"<a href=\"Container\/ProfileContainer.php.html#75\">App\\Http\\Container\\ProfileContainer::validatePasswordFieldArray<\/a>"],[0,1,"<a href=\"Controllers\/Auth\/ForgotPasswordController.php.html#28\">App\\Http\\Controllers\\Auth\\ForgotPasswordController::__construct<\/a>"],[0,1,"<a href=\"Controllers\/Auth\/LoginController.php.html#35\">App\\Http\\Controllers\\Auth\\LoginController::__construct<\/a>"],[0,1,"<a href=\"Controllers\/Auth\/RegisterController.php.html#38\">App\\Http\\Controllers\\Auth\\RegisterController::__construct<\/a>"],[0,1,"<a href=\"Controllers\/Auth\/RegisterController.php.html#49\">App\\Http\\Controllers\\Auth\\RegisterController::validator<\/a>"],[0,1,"<a href=\"Controllers\/Auth\/RegisterController.php.html#64\">App\\Http\\Controllers\\Auth\\RegisterController::create<\/a>"],[0,1,"<a href=\"Controllers\/Auth\/ResetPasswordController.php.html#35\">App\\Http\\Controllers\\Auth\\ResetPasswordController::__construct<\/a>"],[0,1,"<a href=\"Controllers\/Auth\/VerificationController.php.html#35\">App\\Http\\Controllers\\Auth\\VerificationController::__construct<\/a>"],[100,1,"<a href=\"Controllers\/AuthController.php.html#23\">App\\Http\\Controllers\\AuthController::__construct<\/a>"],[100,1,"<a href=\"Controllers\/AuthController.php.html#26\">App\\Http\\Controllers\\AuthController::index<\/a>"],[0,1,"<a href=\"Controllers\/AuthController.php.html#31\">App\\Http\\Controllers\\AuthController::register<\/a>"],[42.857142857142854,3,"<a href=\"Controllers\/AuthController.php.html#36\">App\\Http\\Controllers\\AuthController::postLogin<\/a>"],[0,3,"<a href=\"Controllers\/AuthController.php.html#50\">App\\Http\\Controllers\\AuthController::postRegister<\/a>"],[0,1,"<a href=\"Controllers\/AuthController.php.html#66\">App\\Http\\Controllers\\AuthController::logout<\/a>"],[0,1,"<a href=\"Controllers\/AuthController.php.html#72\">App\\Http\\Controllers\\AuthController::forgetPassword<\/a>"],[0,3,"<a href=\"Controllers\/AuthController.php.html#76\">App\\Http\\Controllers\\AuthController::sendForgetPassword<\/a>"],[0,2,"<a href=\"Controllers\/AuthController.php.html#89\">App\\Http\\Controllers\\AuthController::resetPassword<\/a>"],[0,1,"<a href=\"Controllers\/AuthController.php.html#97\">App\\Http\\Controllers\\AuthController::updatePassword<\/a>"],[0,2,"<a href=\"Controllers\/ContactsController.php.html#14\">App\\Http\\Controllers\\ContactsController::getContactList<\/a>"],[0,1,"<a href=\"Controllers\/ContactsController.php.html#22\">App\\Http\\Controllers\\ContactsController::seachContactList<\/a>"],[0,1,"<a href=\"Controllers\/ContactsController.php.html#29\">App\\Http\\Controllers\\ContactsController::addUserFriend<\/a>"],[0,1,"<a href=\"Controllers\/LocationController.php.html#11\">App\\Http\\Controllers\\LocationController::getState<\/a>"],[0,1,"<a href=\"Controllers\/LocationController.php.html#16\">App\\Http\\Controllers\\LocationController::getCity<\/a>"],[0,1,"<a href=\"Controllers\/LocationController.php.html#21\">App\\Http\\Controllers\\LocationController::getUserState<\/a>"],[0,1,"<a href=\"Controllers\/ProfileDetailController.php.html#16\">App\\Http\\Controllers\\ProfileDetailController::__construct<\/a>"],[0,2,"<a href=\"Controllers\/ProfileDetailController.php.html#20\">App\\Http\\Controllers\\ProfileDetailController::dashboard<\/a>"],[0,1,"<a href=\"Controllers\/ProfileDetailController.php.html#29\">App\\Http\\Controllers\\ProfileDetailController::saveProfileDetail<\/a>"],[0,2,"<a href=\"Controllers\/ProfileDetailController.php.html#35\">App\\Http\\Controllers\\ProfileDetailController::getProfileDetail<\/a>"],[0,1,"<a href=\"Controllers\/ProfileDetailController.php.html#45\">App\\Http\\Controllers\\ProfileDetailController::editProfileDetail<\/a>"],[0,1,"<a href=\"Controllers\/ProfileDetailController.php.html#51\">App\\Http\\Controllers\\ProfileDetailController::resetPassword<\/a>"],[0,2,"<a href=\"Controllers\/ProfileDetailController.php.html#55\">App\\Http\\Controllers\\ProfileDetailController::updatePassword<\/a>"],[0,2,"<a href=\"Middleware\/AuthLoginMiddleware.php.html#17\">App\\Http\\Middleware\\AuthLoginMiddleware::handle<\/a>"],[0,2,"<a href=\"Middleware\/Authenticate.php.html#16\">App\\Http\\Middleware\\Authenticate::redirectTo<\/a>"],[0,2,"<a href=\"Middleware\/RedirectIfAuthenticated.php.html#18\">App\\Http\\Middleware\\RedirectIfAuthenticated::handle<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

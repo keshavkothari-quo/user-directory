@@ -45,8 +45,8 @@ class ContactsContainer implements ContactsContract
         $userFriend->user_id = $data['userId'];
         $userFriend->friend_id = $data['friendId'];
         $userFriend->save();
-        $user = User::paginate(5);
-        return $user;
+        return User::paginate(5);
+
     }
 
     private function getFriendList($userId){

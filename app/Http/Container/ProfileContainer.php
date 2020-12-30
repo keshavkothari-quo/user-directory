@@ -16,11 +16,6 @@ use Illuminate\Support\Facades\Validator;
 class ProfileContainer implements ProfileContract
 {
 
-    public function dashboard($userId){
-        $user = new User();
-        return $user->findById($userId);
-    }
-
     public function getProfileDetail($userId)
     {
         $user = new User();
@@ -29,9 +24,7 @@ class ProfileContainer implements ProfileContract
 
     public function saveProfileData($data){
 
-        $validationArray = $this->validateArray($data);
-//        request()->validate($validationArray);
-//        dd($data);
+        $validationArray = $this->validateArray();
         $validate = Validator::make($data,$validationArray);
         if($validate->fails()){
             return null;
@@ -48,8 +41,6 @@ class ProfileContainer implements ProfileContract
         }
         $userCity = new UserCity();
         // TODO with update or create
-//        $userCity->updateOrCreate($data['userId'],$data['city']);
-        $userCity = new UserCity();
         if(!$user->userCity) {
             $userCity->user_id = $data['userId'];
             $userCity->city_id = $data['city'];
@@ -61,7 +52,7 @@ class ProfileContainer implements ProfileContract
         return $user;
     }
 
-    public function validateArray($data){
+    public function validateArray(){
 
         $validateArray = ['name' => 'required','email' => 'required|email','mobile' => 'required|numeric|min:1000000000|max:100000000000000','dob'=>'required','city'=>'required'];
         return $validateArray;

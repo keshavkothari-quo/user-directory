@@ -35,24 +35,30 @@
         <br>
         <form action="{{url('post-register')}}" method="POST" id="logForm">
             {{ csrf_field() }}
-            <div class="form-group" id="divEmail" >
-                <label  for="inputEmailAddress">Email</label>
-                <input  id="inputEmailAddress" type="email"  name="email" placeholder="Enter email address" />
+            <div class="form-group row" id="divEmail" >
+                <label  class="col-form-label col-sm-1" for="inputEmailAddress">Email</label>
+                <div class="col-sm-2">
+                    <input  class="form-control-plaintext"  id="inputEmailAddress" type="email"  name="email" placeholder="Enter email address" />
+                </div>
                 @if ($errors->has('email'))
                     <span class="error">{{ $errors->first('email') }}</span>
                 @endif
             </div>
-            <div class="form-group" id="divMobile" style="display: none">
-                <label  for="inputMobile">Mobile</label>
-                <input  id="inputMobile" type="text" name="mobile" placeholder="Enter mobile" />
+            <div class="form-group row" id="divMobile" style="display: none">
+                <label  class="col-form-label col-sm-1" for="inputMobile">Mobile</label>
+                <div class="col-sm-2">
+                    <input class="form-control-plaintext"  id="inputMobile" type="text" name="mobile" placeholder="Enter mobile" />
+                </div>
                 @if ($errors->has('mobile'))
                     <span class="error">{{ $errors->first('mobile') }}</span>
                 @endif
             </div>
-            <div class="form-group">
-                <label class="small mb-1" for="inputPassword">Password</label>
-                <input id="inputPassword" type="password" name="password" placeholder="Enter password" />
-                <i class="far fa-eye" id="togglePassword"></i>
+            <div class="form-group row">
+                <label class="col-form-label col-sm-1" for="inputPassword">Password</label>
+                <div class="col-sm-2">
+                    <input class="form-control-plaintext" id="inputPassword" type="password" name="password" placeholder="Enter password" />
+                </div>
+                <i class="far fa-eye mt-2" id="togglePassword"></i>
                 @if ($errors->has('password'))
                     <span class="error">{{ $errors->first('password') }}</span>
                 @endif
@@ -73,14 +79,14 @@
 <script>
     function emailMobileCheck() {
         if (document.getElementById('email').checked) {
-            document.getElementById('divEmail').style.display = 'block';
+            document.getElementById('divEmail').style.display = 'flex';
             document.getElementById('divMobile').style.display = 'none';
             document.getElementById('inputMobile').value = '';
 
         }
         if (document.getElementById('mobile').checked) {
             document.getElementById('divEmail').style.display = 'none';
-            document.getElementById('divMobile').style.display = 'block';
+            document.getElementById('divMobile').style.display = 'flex';
             document.getElementById('inputEmailAddress').value = '';
         }
 

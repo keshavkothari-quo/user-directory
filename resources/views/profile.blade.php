@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
 </head>
 <body class="sb-nav-fixed">
@@ -20,9 +19,11 @@
      <form action="{{url('save-profile')}}" method="POST" id="logForm">
          {{ csrf_field() }}
          <input hidden name="userId" value="{{$userId->id}}">
-         <div class="form-group">
-             <label  for="inputName">Full Name</label>
-             <input  id="inputName" type="text"  name="name" placeholder="Enter your Full Name" />
+         <div class="form-group row">
+             <label class="col-form-label col-sm-2" for="inputName">Full Name</label>
+             <div class="col-sm-2">
+                <input class="form-control-plaintext" id="inputName" type="text"  name="name" placeholder="Enter your Full Name" />
+             </div>
              @if ($errors->has('name'))
                  <span class="error">{{ $errors->first('name') }}</span>
              @endif

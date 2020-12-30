@@ -1,0 +1,6 @@
+projectKey=user-directory
+serverUrl=http://127.0.0.1:9000
+serverVersion=8.6.0.39681
+dashboardUrl=http://127.0.0.1:9000/dashboard?id=user-directory
+ceTaskId=AXaE0iCD04WJdjU-jqXP
+ceTaskUrl=http://127.0.0.1:9000/api/ce/task?id=AXaE0iCD04WJdjU-jqXP

@@ -46,8 +46,8 @@ class LoginTest extends TestCase
         $response->assertViewIs('login');
     }
 
-    /**
-     * @test
+    /** @test
+     * @depends test_user_can_view_a_login_form
      */
     public function user_can_login_with_correct_credentials()
     {
@@ -58,4 +58,5 @@ class LoginTest extends TestCase
         $response->assertRedirect('/dashboard');
         $this->assertAuthenticatedAs($this->user);
     }
+
 }

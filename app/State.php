@@ -7,12 +7,6 @@ use Illuminate\Support\Facades\DB;
 
 class State extends Model
 {
-    //
-//    public function getAllData()
-//    {
-//        return State::all();
-//    }
-
     public function findById($id)
     {
         // TODO: Implement findById() method.

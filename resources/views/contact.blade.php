@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <title>Contact</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
@@ -15,6 +16,11 @@
             <a href="{{url('logout')}}">Logout</a>
         </button>
     </div>
+    @if (session()->has('success'))
+        <div id="successMessage" class="alert alert-success col-sm-2" role="alert">
+            {{ session('success') }}
+        </div>
+    @endif
 <form action="{{url('search-contact')}}" method="get" id="search">
     {{ csrf_field() }}
     <div class="form-group">
@@ -32,16 +38,16 @@
 <table id="contactTable" class="table table-striped table-bordered" style="width:100%">
     <thead>
     <tr>
-        <th>
+        <th id="name">
             @sortablelink('name')
         </th>
-        <th>
+        <th id="email">
             @sortablelink('email')
         </th>
-        <th>@sortablelink('mobile')</th>
-        <th>@sortablelink('dob')</th>
-        <th>City</th>
-        <th>Action</th>
+        <th id="mobile">@sortablelink('mobile')</th>
+        <th id="dob">@sortablelink('dob')</th>
+        <th id="city">City</th>
+        <th id="action">Action</th>
     </tr>
     </thead>
         <tbody>
@@ -70,16 +76,7 @@
             </tr>
         @endif
         </tbody>
-    <tfoot>
-    <tr>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Mobile</th>
-        <th>DOB</th>
-        <th>City</th>
-        <th>Action</th>
-    </tr>
-    </tfoot>
+
     </table>
     {!! $data->appends(['sort' => 'name'])->links() !!}
 </body>
@@ -104,8 +101,11 @@
     function closeSearch(){
         window.location = "{{url('/contact-list')}}/{{Auth::user()->id}}"
     }
-
-
+    $(function() {
+        setTimeout(function () {
+            $("#successMessage").hide('blind', {}, 500)
+        }, 5000);
+    });
 </script>
 @include('footer');
 </html>

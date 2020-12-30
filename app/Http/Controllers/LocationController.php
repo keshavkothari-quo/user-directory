@@ -15,7 +15,7 @@ class LocationController extends Controller
 
     public function getCity(LocationContract $locationContract,Request $request){
         $data = $locationContract->getCities($request);
-        return response()->json($data);;
+        return response()->json($data);
     }
 
     public function getUserState(LocationContract $locationContract,Request $request){

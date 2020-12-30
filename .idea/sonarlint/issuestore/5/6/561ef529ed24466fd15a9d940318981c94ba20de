@@ -1,0 +1,3 @@
+
+è	php:S1192l"zDefine a constant instead of duplicating this literal "regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).+$/" 3 times.(∆ú£ö
+[	php:S1192l"FDefine a constant instead of duplicating this literal "min:6" 3 times.(∆ú£ö

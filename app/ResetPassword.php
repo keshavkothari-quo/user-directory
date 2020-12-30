@@ -12,8 +12,8 @@ class ResetPassword extends Model
     public $timestamps = false;
 
     public function checkToken($data){
-        $validate = ResetPassword::select('email')->where('token','=',$data)->get()->first() ;
-        return $validate;
+        return ResetPassword::select('email')->where('token','=',$data)->get()->first() ;
+
     }
 
     public function deleteEmail($email)

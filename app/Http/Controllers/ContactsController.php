@@ -27,7 +27,7 @@ class ContactsController extends Controller
     }
 
     public function addUserFriend(Request $request, ContactsContract $contactsContract){
-        $data = $contactsContract->addUserFriend($request->all());
-        return $data;
+        return $contactsContract->addUserFriend($request->all());
+
     }
 }

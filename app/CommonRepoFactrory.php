@@ -19,6 +19,8 @@ class CommonRepoFactrory implements CommonRepo
             case "State":
                 return new State();
                 break;
+            default:
+                break;
         }
         return $object;
     }

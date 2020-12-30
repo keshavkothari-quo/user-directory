@@ -7,8 +7,9 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\DB;
 use Kyslik\ColumnSortable\Sortable;
+use Tymon\JWTAuth\Contracts\JWTSubject;
 
-class User extends Authenticatable implements CommonRepo
+class User extends Authenticatable implements CommonRepo,JWTSubject
 {
     use Notifiable;
     use Sortable;
@@ -41,6 +42,15 @@ class User extends Authenticatable implements CommonRepo
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    // JWT function
+    public function getJWTIdentifier()
+    {
+        return $this->getKey();
+    }
+    public function getJWTCustomClaims()
+    {
+        return [];
+    }
 
     public function userCity(){
         return $this->hasOne('App\UserCity');
@@ -74,9 +84,11 @@ class User extends Authenticatable implements CommonRepo
     }
 
     public function getOneUser($col,$data){
-        return User::select("*")
+        return User::select('id','name','email','mobile','dob')
             ->where($col, $data)
             ->get()->first();
+
+        return 1;
     }
 
     public function getUserEmailCount($userEmail)

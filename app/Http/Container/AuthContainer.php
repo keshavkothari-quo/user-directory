@@ -7,6 +7,7 @@ namespace App\Http\Container;
 use App\Http\Contract\AuthContract;
 use App\ResetPassword;
 use App\User;
+use http\Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -33,8 +34,7 @@ class AuthContainer implements AuthContract{
                     $col = 'mobile';
                 }
                 $userObj = new User();
-                $user = $userObj->getOneUser($col, $data[$col]);
-                return $user;
+                return $userObj->getOneUser($col, $data[$col]);
             }
             return null;
         } catch (Exception $exception) {
@@ -83,6 +83,20 @@ class AuthContainer implements AuthContract{
         return $user;
     }
 
+    public function createUser(array $data): User
+    {
+        $user = new User();
+        if(!empty($data['email'])) {
+            $user->email = $data['email'];
+        }
+        if(!empty($data['name'])){
+            $user->name = $data['name'];
+        }
+        $user->password = Hash::make($data['password']);
+        $user->save();
+        return $user;
+    }
+
     public function createCredentialForLogin(array $data){
         if(!empty($data['email'])) {
             $credentials['email'] = $data['email'];
@@ -125,7 +139,6 @@ class AuthContainer implements AuthContract{
     }
 
     public function logout() {
-//        Session::flush();
         Auth::logout();
         return Redirect('login');
     }
@@ -149,11 +162,11 @@ class AuthContainer implements AuthContract{
         $body = "Click on this url to reset your password ". url('/reset-password/') . "?token=$token";
         $data = array('name'=>"Keshav", 'body' => $body, 'link' => url('/reset-password/') . "?token=$token");
         $subject = 'Reset Password';
-        $this->sendEmail($data,$userEmail,$subject);
+        $this->sendEmail($data,$subject);
         return 1;
     }
 
-    public function sendEmail($data,$userEmail,$subject){
+    public function sendEmail($data,$subject){
         $name = 'Test Mail';
         $userEmail = 'keshav@mailinator.com';
         Mail::send('emails.mail', $data, function($message) use ($userEmail, $name,$subject) {

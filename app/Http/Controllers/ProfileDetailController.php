@@ -6,6 +6,7 @@ use App\Http\Contract\ProfileContract;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
+use Tymon\JWTAuth\Facades\JWTAuth;
 use Validator,Response;
 use Session;
 class ProfileDetailController extends Controller
@@ -19,7 +20,7 @@ class ProfileDetailController extends Controller
 
     public function dashboard()
     {
-        $user = $this->profileContract->dashboard(Auth::user()->id);
+        $user = $this->profileContract->getProfileDetail(Auth::user()->id);
         if(!empty($user)) {
             return view('dashboard',['userId' => $user]);
         }
@@ -29,7 +30,7 @@ class ProfileDetailController extends Controller
     public function saveProfileDetail(Request $request){
         $data = $request->all();
         $user = $this->profileContract->saveProfileData($data);
-        return redirect()->intended('dashboard')->with('profileUpdate', "Your profile detail is added");
+        return redirect()->intended('dashboard')->with('profileUpdate', "Profile saved successfully");
     }
 
     public function getProfileDetail($userId)
@@ -58,6 +59,12 @@ class ProfileDetailController extends Controller
             return redirect()->back()->with('passwordMisMatched',"Please enter current correct");
         }
         return redirect()->intended('dashboard')->with('passwordUpdate', 'Your Password is updated');
+    }
+
+    public function apiDashboard(Request $request)
+    {
+        $user = JWTAuth::toUser($request->token);
+        return response()->json(['data' => $user]);
     }
 
 }

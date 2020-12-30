@@ -10,7 +10,7 @@
 </head>
  <!-- Navbar-->
 <body class="sb-nav-fixed">
-<div class="align-left">
+<div class="align-content-end align-left">
     <i class="fa fa-sign-out"></i>
     <button class="btn btn-warning float-right">
         <a href="{{url('logout')}}">Logout</a>
@@ -36,38 +36,40 @@
     <h3> User Dashboard </h3>
     <span>Your profile detaits, to Edit  <a href="{{url('edit-profile')}}/{{Auth::user()->id }}">Click here</a> </span>
         <input hidden name="userId" value="{{$userId->id}}">
-        <div class="form-group">
+        <div class="form-group row">
         @if($userId->name)
-            <label for="inputname">Name</label>
-            <span>{{$userId->name}} </span>
+            <label class="col-form-label col-sm-1" for="inputname">Name</label>
+            <span class="col-sm-1 mt-2">{{$userId->name}} </span>
         @endif
         </div>
-        <div class="form-group" id="divEmail">
+        <div class="form-group row" id="divEmail">
             @if($userId->email)
-                <label for="inputname">Email: </label>
-                <span> {{$userId->email}} </span>
+                <label class="col-form-label col-sm-1" for="inputname">Email: </label>
+                <span class="col-sm-1 mt-2"> {{$userId->email}} </span>
             @endif
         </div>
-        <div class="form-group" id="divMobile">
+        <div class="form-group row" id="divMobile">
             @if($userId->mobile)
-                <label  for="inputname">Mobile</label>
-                <span> {{$userId->mobile}}
+                <label class="col-form-label col-sm-1" for="inputname">Mobile</label>
+                <span class="col-sm-1 mt-2"> {{$userId->mobile}}
                 </span>
             @endif
         </div>
-        <div class="form-group md-form md-outline input-with-post-icon datepicker">
+        <div class="form-group row">
             @if($userId->dob)
-                <label  for="inputname">DOB</label>
-                <span> {{$userId->dob}}</span>
+                <label class="col-form-label col-sm-1" for="inputname">DOB</label>
+                <span class="col-sm-1 mt-2"> {{$userId->dob}}</span>
             @endif
         </div>
 
-        @if($userId->userCity)
-            <label  for="inputname">City</label>
-            <div id="userCityName">
-            </div>
-            <input id="userCityId" hidden value="{{$userId->userCity->city_id}}">
-        @endif
+        <div class="form-group row">
+            @if($userId->userCity)
+                <label class="col-form-label col-sm-1" for="inputname">City</label>
+                <div class="col-sm-1 mt-2" id="userCityName">
+                </div>
+                <input id="userCityId" hidden value="{{$userId->userCity->city_id}}">
+            @endif
+        </div>
     </div>
 </body>
 @include('footer');
@@ -132,5 +134,10 @@
             }
         });
     }
+    $(function (){
+        setTimeout(function (){
+            $(".alert").hide('blind',{}, 500)
+        }, 5000);
+    });
 </script>
 </html>

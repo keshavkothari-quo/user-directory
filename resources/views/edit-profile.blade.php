@@ -3,10 +3,9 @@
 <head>
     <title>Edit Profile</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
 </head>
 <body class="sb-nav-fixed">
@@ -26,72 +25,79 @@
      <form action="{{url('edit-profile')}}" method="POST" id="logForm">
          {{ csrf_field() }}
          <input hidden name="userId" value="{{$userId->id}}">
-
-             <div class="form-group">
-             <label  for="inputName">Full Name</label>
+             <div class="form-group row">
+                <label class="col-form-label col-sm-1" for="inputName">Full Name</label>
+                 <div class="col-sm-2">
                  @if($userId->name)
-                     <input  id="inputName" type="text"  name="name" placeholder="Enter your Full Name" value="{{$userId->name}}" />
+                     <input class="form-control-plaintext" id="inputName" type="text"  name="name" placeholder="Enter your Full Name" value="{{$userId->name}}" />
                  @else
-                     <input  id="inputName" type="text"  name="name" placeholder="Enter your Full Name" />
+                     <input class="form-control-plaintext" id="inputName" type="text"  name="name" placeholder="Enter your Full Name" />
                  @endif
-             @if ($errors->has('name'))
-                 <span class="error">{{ $errors->first('name') }}</span>
-             @endif
-         </div>
+                 @if ($errors->has('name'))
+                     <span class="error">{{ $errors->first('name') }}</span>
+                 @endif
+                 </div>
+             </div>
 
-             <div class="form-group" id="divEmail">
-                 <label  for="inputEmailAddress">Email</label>
+             <div class="form-group row" id="divEmail">
+                 <label class="col-form-label col-sm-1"   for="inputEmailAddress">Email</label>
+                 <div class="col-sm-2">
                  @if($userId->email)
-                    <input  id="inputEmailAddress" type="email"  name="email" placeholder="Enter email address" value="{{$userId->email}}" />
+                    <input class="form-control-plaintext" id="inputEmailAddress" type="email"  name="email" placeholder="Enter email address" value="{{$userId->email}}" />
                  @else
-                     <input  id="inputEmailAddress" type="email"  name="email" placeholder="Enter email address" />
+                     <input class="form-control-plaintext" id="inputEmailAddress" type="email"  name="email" placeholder="Enter email address" />
                  @endif
                  @if ($errors->has('email'))
                      <span class="error">{{ $errors->first('email') }}</span>
                  @endif
+                 </div>
              </div>
-             <div class="form-group" id="divMobile" >
-                 <label  for="inputMobile">Mobile</label>
+             <div class="form-group row" id="divMobile" >
+                 <label class="col-form-label col-sm-1"   for="inputMobile">Mobile</label>
+                 <div class="col-sm-2">
                  @if($userId->mobile)
-                    <input  id="inputMobile" type="text" name="mobile" placeholder="Enter mobile" value="{{$userId->mobile}}" />
+                    <input class="form-control-plaintext" id="inputMobile" type="text" name="mobile" placeholder="Enter mobile" value="{{$userId->mobile}}" />
                  @else
-                     <input  id="inputMobile" type="text" name="mobile" placeholder="Enter mobile" />
+                     <input class="form-control-plaintext" id="inputMobile" type="text" name="mobile" placeholder="Enter mobile" />
                  @endif
                  @if ($errors->has('mobile'))
                      <span class="error">{{ $errors->first('mobile') }}</span>
                  @endif
+                 </div>
              </div>
 
-         <div class="form-group">
-             <label  for="inputDob">Date of Birth</label>
+         <div class="form-group row">
+             <label class="col-form-label col-sm-1"   for="inputDob">Date of Birth</label>
+             <div class="col-sm-2">
              @if($userId->dob)
-                <input  id="inputDob" type="text"  name="dob" class="date" value="{{$userId->dob}}"/>
+                <input class="form-control-plaintext" id="inputDob" type="text"  name="dob" class="date" value="{{$userId->dob}}"/>
              @else
-                 <input  id="inputDob" type="text"  name="dob" class="date" value="{{$userId->dob}}"/>
+                 <input class="form-control-plaintext" id="inputDob" type="text"  name="dob" class="date" value="{{$userId->dob}}"/>
              @endif
              @if ($errors->has('dob'))
                  <span class="error">{{ $errors->first('dob') }}</span>
              @endif
+             </div>
          </div>
          <br>
          <br>
          <br>
          @if($userId->userCity)
-             <input id="checkCity" hidden value="{{$userId->userCity->city_id}}" \>
+             <input class="form-control-plaintext" id="checkCity" hidden value="{{$userId->userCity->city_id}}" \>
          @endif
-         <div class="form-group">
-             <label for="state">State</label>
-             <select class="form-control col-3" id="state-dropdown" name="state">
+         <div class="form-group row">
+             <label class="col-form-label col-sm-1"  for="state">State</label>
+             <select class="form-control col-sm-3" id="state-dropdown" name="state">
                  <option value="">Select State</option>
              </select>
          </div>
-         <div class="form-group">
-             <label for="city">City</label>
-             <select class="form-control col-3" id="city-dropdown" name="city">
+         <div class="form-group row">
+             <label class="col-form-label col-sm-1"  for="city">City</label>
+             <select class="form-control col-sm-2" id="city-dropdown" name="city">
                  <option value="">Select City</option>
              </select>
          </div>
-         <div class="form-group">
+         <div class="form-group row">
              <button class="btn btn-primary" type="submit">Save</button>
              <a href="{{url('/dashboard')}}">
              <button class="btn btn-danger" type="button"> Cancel </button>

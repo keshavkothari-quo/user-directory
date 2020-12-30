@@ -20,26 +20,32 @@
            <form action="{{url('reset-password')}}" method="POST" id="logForm">
                 {{ csrf_field() }}
                 <input value="{{$userId}} " name="userId" hidden>
-                <div class="form-group">
-                    <label class="small mb-1" for="inputPassword">Current Password</label>
-                    <input class="form-control py-4" id="inputPassword" type="password" name="password" placeholder="Enter password" />
-                    <i class="far fa-eye" id="togglePassword"></i>
+                <div class="form-group row">
+                    <label class="col-form-label col-sm-1" for="inputPassword">Current Password</label>
+                    <div class="col-sm-2">
+                        <input class="form-control" id="inputPassword" type="password" name="password" placeholder="Enter password" />
+                    </div>
+                    <i class="far fa-eye mt-2" id="togglePassword"></i>
                     @if ($errors->has('password'))
                         <span class="error">{{ $errors->first('password') }}</span>
                     @endif
                 </div>
-               <div class="form-group">
-                   <label class="small mb-1" for="inputPassword">New Password</label>
-                   <input class="form-control py-4" id="inputNewPassword" type="password" name="newPassword" placeholder="Enter New password" />
-                   <i class="far fa-eye" id="toggleNewPassword"></i>
+               <div class="form-group row">
+                   <label class="col-form-label col-sm-1" for="inputPassword">New Password</label>
+                   <div class="col-sm-2">
+                        <input class="form-control" id="inputNewPassword" type="password" name="newPassword" placeholder="Enter New password" />
+                   </div>
+                   <i class="far fa-eye mt-2" id="toggleNewPassword"></i>
                    @if ($errors->has('newPassword'))
                        <span class="error">{{ $errors->first('newPassword') }}</span>
                    @endif
                </div>
-               <div class="form-group">
-                   <label class="small mb-1" for="inputPassword">Confirm Password</label>
-                   <input class="form-control py-4" id="inputConfirmPassword" type="password" name="confirmPassword" placeholder="Confirm password" />
-                   <i class="far fa-eye" id="toggleConfirmPassword"></i>
+               <div class="form-group row">
+                   <label class="col-form-label col-sm-1" for="inputPassword">Confirm Password</label>
+                   <div class="col-sm-2">
+                        <input class="form-control" id="inputConfirmPassword" type="password" name="confirmPassword" placeholder="Confirm password" />
+                   </div>
+                   <i class="far fa-eye mt-2" id="toggleConfirmPassword"></i>
                    @if ($errors->has('confirmPassword'))
                        <span class="error">{{ $errors->first('confirmPassword') }}</span>
                    @endif

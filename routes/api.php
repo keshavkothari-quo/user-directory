@@ -17,9 +17,15 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-    Route::get('state', 'LocationController@getState');
-    Route::post('city', 'LocationController@getCity');
-    Route::get('userState', 'LocationController@getUserState');
+Route::get('state', 'LocationController@getState');
+Route::post('city', 'LocationController@getCity');
+Route::get('userState', 'LocationController@getUserState');
 
-    Route::post('user-friend', 'ContactsController@addUserFriend');
+Route::post('user-friend', 'ContactsController@addUserFriend');
 
+Route::post('login','AuthController@apiLogin');
+Route::post('register','AuthController@apiRegister');
+
+Route::group(['middleware' => 'jwt.verify'], function () {
+   Route::get('dashboard','ProfileDetailController@apiDashboard');
+});
